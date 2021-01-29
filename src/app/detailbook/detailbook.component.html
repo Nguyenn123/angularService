@@ -1,0 +1,21 @@
+<h2>City Details</h2>
+
+<hr/>
+<div *ngIf="book">
+  <div>
+    <label><b>id: </b></label> {{book.id}}
+  </div>
+  <div>
+    <label><b>Author: </b></label> {{book.author}}
+  </div>
+  <div>
+    <label><b>Title: </b></label> {{book.title}}
+  </div>
+  <div>
+    <label><b>description: </b></label>{{book.description}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to City List</button><br>

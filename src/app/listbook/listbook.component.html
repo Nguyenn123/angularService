@@ -1,0 +1,25 @@
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col" >#</th>
+    <th scope="col" >title</th>
+    <th scope="col" >author</th>
+    <th scope="col">Description</th>
+    <th scope="col">Action</th>
+  </tr>
+  </thead>
+  <tbody>
+
+  <tr *ngFor="let b of books; let i = index">
+    <th scope="row">{{i + 1}}</th>
+    <td>{{b.title}}</td>
+    <td>{{b.author}}</td>
+    <td>{{b.description}}</td>
+    <td>
+      <button type="button" (click)="detail(b.id)" class="btn btn-info">detail</button>
+      <button type="button" (click)="delete(b.id)" class="btn btn-danger" >delete</button>
+      <button type="button" (click)="update(b.id)" class="btn badge-primary">update</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
